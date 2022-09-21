@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import manuRouter from './routes/allRoutes.js';
 
 
@@ -8,6 +9,7 @@ const app = express();
 const dbUrl = 'mongodb://localhost:27017/pharmacy'
 
 app.use(express.json());
+app.use(cors())
 app.use(manuRouter)
 
 

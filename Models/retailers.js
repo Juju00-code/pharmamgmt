@@ -22,6 +22,6 @@ const retailerSchema = new Schema({
 });
 
 // Model for that collection using the schema
-const retailers = model('retailers', retailerSchema);
+const Retailers = model('retailers', retailerSchema);
 
-export default retailers;
+export default Retailers;

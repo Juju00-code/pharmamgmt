@@ -18,11 +18,11 @@ const invoicesSchema = new Schema({
         ref: retailers
     },
     unitPrice: {
-        type: String,
+        type: Number,
         required: true
     },
     totalQuantity: {
-        type: Array,
+        type: Number,
         required: true
     },
     totalValue: {
@@ -35,13 +35,18 @@ const invoicesSchema = new Schema({
     },
     remainderAmount: {
         type: String,
-        required: true
+        required: false
     },
 
     dateOfPurchase: {
         type: String,
         required: true
     },
+
+    allPaid:{
+        type: Boolean,
+        required: true
+    }
 });
 
 // Model for that collection using the schema
